@@ -1,4 +1,4 @@
-# matlab_shooting_game2
+# matlab_shooting_game
 
 It is a simple shooting game that runs in MATLAB.
 Open and run shooting_v3.m to start the game.
