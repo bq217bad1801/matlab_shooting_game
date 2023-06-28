@@ -86,7 +86,7 @@ end
         % カーソルの位置取得
         cp = ax.CurrentPoint;
         xMouse = cp(1,1); % x 座標
-        yMouse = cp(1,2); % y 座標
+        % yMouse = cp(1,2); % y 座標
 
         % 四角の移動
         rec.Position(1) = xMouse-rectSize_ship/2;
@@ -94,6 +94,7 @@ end
         % 画像の移動
         myimg.XData = [rec.Position(1) rec.Position(1)+rectSize_ship];
     end
+
     function clickFnc1(src,callbackdata) % 右クリックで球の射出
         if bulletrec.Position(2) < 0
             bulletrec.Position(1) = pos(1)+rectSize_ship/2-8;
