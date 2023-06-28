@@ -29,8 +29,8 @@ enemyimg = image(enemyimg,'XData',[400 400+rectSize_enemy],'YData',[50 50+rectSi
 enemy_vx = 20; % 敵のスピード
 
 fig.WindowButtonMotionFcn = @cursorFnc; % マウスを動かしたときのコールバック
-fig.WindowButtonDownFcn =  @clickFnc1;
-fig.WindowKeyPressFcn =  @clickFnc2;
+fig.WindowButtonDownFcn =  @clickFnc1; % 右クリックしたときのコールバック
+fig.WindowKeyPressFcn =  @clickFnc2; % スペースを押したときのコールバック
 
 cnt = 0;
 while(isgraphics(fig))
@@ -94,13 +94,13 @@ end
         % 画像の移動
         myimg.XData = [rec.Position(1) rec.Position(1)+rectSize_ship];
     end
-    function clickFnc1(src,callbackdata)
+    function clickFnc1(src,callbackdata) % 右クリックで球の射出
         if bulletrec.Position(2) < 0
             bulletrec.Position(1) = pos(1)+rectSize_ship/2-8;
             bulletrec.Position(2) = pos(2);
         end
     end
-    function clickFnc2(src,callbackdata)
+    function clickFnc2(src,callbackdata) % スペースで球の射出
         key = callbackdata.Character;
         if bulletrec.Position(2) < 0 && strcmp(key,' ')
             bulletrec.Position(1) = pos(1)+rectSize_ship/2-8;
