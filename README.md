@@ -9,4 +9,6 @@ The aircraft moves according to the mouse, and you can hit the ball by clicking 
 Please try to play.
 
 Play Screen:
-![image](https://github.com/bq217bad1801/matlab_shooting_game/assets/137877697/d4e7cf77-42cf-407a-80af-56c594790f57)
+
+https://github.com/bq217bad1801/matlab_shooting_game/assets/137877697/fbf2b891-fa97-44e4-82c1-22478a989eca
+
